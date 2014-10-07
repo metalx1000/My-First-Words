@@ -32,6 +32,12 @@ preload.prototype = {
                 this.game.load.image(images[i],"res/" + images[i] + ".png");
             }
 
+            //load alphabet
+            var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            letters = alphabet.split("");
+            for(var i = 0;i < letters.length;i++){
+                this.game.load.image(letters[i],"res/letters/" + letters[i] + ".png");;
+            }
             //music: https://www.youtube.com/watch?v=qFQP_A4Vacc
             this.game.load.audio('music', ['res/music/music.mp3','res/music/music.ogg']);
 
