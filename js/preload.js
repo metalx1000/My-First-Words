@@ -36,7 +36,8 @@ preload.prototype = {
             var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             letters = alphabet.split("");
             for(var i = 0;i < letters.length;i++){
-                this.game.load.image(letters[i],"res/letters/" + letters[i] + ".png");;
+                this.game.load.image(letters[i] + "_img","res/letters/" + letters[i] + ".png");
+                this.game.load.audio(letters[i] + "_snd", ['res/sounds/letters/' + letters[i] + '.mp3','res/sounds/letters/' + letters[i] + '.ogg']);
             }
             //music: https://www.youtube.com/watch?v=qFQP_A4Vacc
             this.game.load.audio('music', ['res/music/music.mp3','res/music/music.ogg']);
