@@ -47,10 +47,12 @@ theGame.prototype = {
         load_word: function(){
             for(var i=0;i<words.length;i++){
                 var letter = this.game.add.sprite(200*i+128,this.game.world.height * 0.5,"L_img");
+                var snd = this.game.add.audio("L_snd");
                 letter.anchor.setTo(.5,.5);
                 letter.scale.setTo(4,4);
                 letter.inputEnabled = true;
                 letter.events.onInputOver.add(function(_this){
+                    snd.play('',0,1,false);
                     var tween = _this.game.add.tween(_this.scale).to({ x: 5, y: 5 }, 200);
                     tween.start();
                 });
