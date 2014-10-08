@@ -1,5 +1,5 @@
 var theGame = function(game){
-    words = ["CAT","DOG","OWL"];
+    words = ["CAT","DOG","OWL","BOX","FOX","BAT","FROG","COW","HOT","SUN","PIG"];
 }
 
 theGame.prototype = {
@@ -23,7 +23,7 @@ theGame.prototype = {
         },
         level1: function(){
             click.play();
-            this.game.state.start("Level1");
+            this.game.state.start("TheGame");
         },
 	create_player: function(pl){
             //player animation
