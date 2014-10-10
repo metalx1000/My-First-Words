@@ -41,13 +41,12 @@ theGame.prototype = {
                 letter.inputEnabled = true;
                 letter.events.onInputOver.add(function(_this){
                     _this.snd.play('',0,1,false);
-                    var tween = _this.game.add.tween(_this.scale).to({ x: 5, y: 5 }, 200);
-                    tween.start();
+                    var tween = _this.game.add.tween(_this.scale)
+                    .to({ x: 5, y: 5 }, 200)
+                    .to({ x: 4, y: 4 }, 400)
+                    .start();
                 });
-                letter.events.onInputOut.add(function(_this){
-                    var tween = _this.game.add.tween(_this.scale).to({ x: 4, y: 4 }, 200);
-                    tween.start();
-                });
+
 
             }
         }
