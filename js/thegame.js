@@ -1,5 +1,5 @@
 var theGame = function(game){
-    words = ["CAT","DOG","OWL","BOX","FOX","BAT","FROG","COW","HOT","SUN","PIG"];
+    words = ["CAT","DOG","OWL","BOX","FOX","BAT","FROG","COW","HOT","SUN","PIG","WET","BIG"];
 }
 
 theGame.prototype = {
